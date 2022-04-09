@@ -10,7 +10,7 @@ elForm.addEventListener("submit",evt=>{
   let InputVal = elInput.value;
 
   async function getTodos(){
-    const response = await fetch(`http://www.omdbapi.com/?apikey=[1f422e8a]&s=${InputVal}`);
+    const response = await fetch(`http://www.omdbapi.com/?apikey=[1f422e8a]&=${InputVal}`);
     // http://www.omdbapi.com/?apikey=[1f422e8a]&
     // http://www.omdbapi.com/?i=tt3896198&apikey=1f422e8a&
     const data = await response.json();
