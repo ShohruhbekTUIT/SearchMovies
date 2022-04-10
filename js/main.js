@@ -2,7 +2,10 @@ const elForm = document.querySelector(".site-form");
 let elInput = document.querySelector(".form-input");
 const elList = document.querySelector(".site-list");
 
+const elBtnPrew = document.querySelector(".prew-btn");
+const elBtnNext = document.querySelector(".next-btn");
 
+const Key = "1f422e8a";
 
 elForm.addEventListener("submit",evt=>{
   evt.preventDefault();
@@ -10,7 +13,7 @@ elForm.addEventListener("submit",evt=>{
   let InputVal = elInput.value;
 
   async function getTodos(){
-    const response = await fetch(`http://www.omdbapi.com/?apikey=1f422e8a&s=${InputVal}`);
+    const response = await fetch(`http://www.omdbapi.com/?apikey=${Key}&s=${InputVal}`);
     // http://www.omdbapi.com/?apikey=[1f422e8a]&
     // http://www.omdbapi.com/?i=tt3896198&apikey=1f422e8a&
     const data = await response.json();
