@@ -52,6 +52,7 @@ li img{
   height: 450px;
 }
 h3{
+  min-height: 54px;
   text-align: center;
   color: darkgrey;
   margin: 0;
@@ -163,7 +164,8 @@ li button:hover {
   margin-top: 150px;
 }
 
-.prew-btn , .next-btn{
+.prev-btn , .next-btn{
+
   color: white;
   background: #dc3545;
   padding: 7px 10px;
@@ -171,4 +173,10 @@ li button:hover {
   font-size: 19px;
   border: none;
   margin: 10px;
+}
+.prev-btn:disabled{
+  opacity: 0.5;
+}
+.next-btn:disabled{
+  opacity: 0.5;
 }
